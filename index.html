@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" defer></script>
+
+</head>
+<body>
+
+<div class="container">
+
+
+  <header class="header">
+    <button class="menu-btn"></button>
+    <img src="./images/logo.svg" alt="">
+    <nav class="nav">
+      <a href="#" class="nav-link">Collections</a>
+      <a href="#" class="nav-link">Men</a>
+      <a href="#" class="nav-link">Women</a>
+      <a href="#" class="nav-link">About</a>
+      <a href="#" class="nav-link">Contact</a>
+    </nav>
+    <div class="header-icons">
+      <div class="cart-div">
+        <div class="number-on-cart">
+        <button class="btn-no-border btn-open-cart"><img src="./images/icon-cart.svg" alt=""></button>
+          <span class="circle-over-cart">0</span>
+        </div>
+        <div class="cart-content" visible="false">
+          <div class="cart-header">
+            <p class="cart-p">Cart</p>
+          </div>
+          <div class="cart-empty" visible="true">
+            <p class="p-empty-cart">Your cart is empty</p>
+          </div>
+          <div class="cart-filled" visible="false">
+
+            <div class="cart-filled-top">
+              <img src="./images/image-product-1-thumbnail.jpg" alt="">
+              <div class="cart-filled-text">
+                <p class="cart-item-name">Fall limited edition sneakers</p>
+                <p class="cart-item-price">$125.00 x <span class="cart-quantity">1</span> <span class="cart-total-price">$375.00</span></p>
+              </div>
+              <button class="btn-no-border btn-dumbster"><img src="./images/icon-delete.svg" alt=""></button>
+            </div>
+            <button class="checkout-btn orange-btn">
+              Checkout
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+      <img src="./images/image-avatar.png" alt="" class="avatar">
+    </div>
+  </header>
+
+  <main class="main">
+
+  <div class="main-images">
+
+
+
+    <button class="previous" value="previous"></button>
+    <button class="next" value="next"></button>
+    <div class="small-images">
+        <img src="./images/image-product-1.jpg" alt="" class="small-img">
+        <img src="./images/image-product-2.jpg" alt="" class="small-img">
+        <img src="./images/image-product-3.jpg" alt="" class="small-img">
+        <img src="./images/image-product-4.jpg" alt="" class="small-img">
+    </div>
+
+  <div class="master-zoom-container" visibility="false">
+    <div class="relative-pos">
+
+        <button class="previous-zoom" value="previous"></button>
+        <button class="next-zoom" value="next"></button>
+        <button class="close-zoom-btn"><img src="./images/icon-close.svg" alt="" class="close-icon-zoom"></button>
+      <div class="zoom-images">
+        <div class="small-images-zoom" slide="0">
+          <img src="./images/image-product-1.jpg" alt="" class="small-img-zoom">
+          <img src="./images/image-product-2.jpg" alt="" class="small-img-zoom">
+          <img src="./images/image-product-3.jpg" alt="" class="small-img-zoom">
+          <img src="./images/image-product-4.jpg" alt="" class="small-img-zoom">
+        </div>
+      </div>
+
+      <div class="thumbnails-zoom">
+        <button value="0" class="thumb-label-zoom btn-no-border"><img src="./images/image-product-1-thumbnail.jpg" alt="" class="thumb-img"></button>
+        <button value="1" class="thumb-label-zoom btn-no-border"><img src="./images/image-product-2-thumbnail.jpg" alt="" class="thumb-img"></button>
+        <button value="2" class="thumb-label-zoom btn-no-border"><img src="./images/image-product-3-thumbnail.jpg" alt="" class="thumb-img"></button>
+        <button value="3" class="thumb-label-zoom btn-no-border"><img src="./images/image-product-4-thumbnail.jpg" alt="" class="thumb-img"></button>
+      </div>
+
+    </div>
+
+    <!-- <div class="thumbnails-zoom">
+      <button value="0" class="thumb-label-zoom btn-no-border"><img src="./images/image-product-1-thumbnail.jpg" alt="" class="thumb-img"></button>
+      <button value="1" class="thumb-label-zoom btn-no-border"><img src="./images/image-product-2-thumbnail.jpg" alt="" class="thumb-img"></button>
+      <button value="2" class="thumb-label-zoom btn-no-border"><img src="./images/image-product-3-thumbnail.jpg" alt="" class="thumb-img"></button>
+      <button value="3" class="thumb-label-zoom btn-no-border"><img src="./images/image-product-4-thumbnail.jpg" alt="" class="thumb-img"></button>
+    </div> -->
+
+    
+  </div>
+
+
+  
+
+    <div class="thumbnails">
+      <button value="0" class="thumb-label btn-no-border" chosen><img src="./images/image-product-1-thumbnail.jpg" alt="" class="thumb-img-1"></button>
+      <button value="1" class="thumb-label btn-no-border"><img src="./images/image-product-2-thumbnail.jpg" alt="" class="thumb-img-2"></button>
+      <button value="2" class="thumb-label btn-no-border"><img src="./images/image-product-3-thumbnail.jpg" alt="" class="thumb-img-3"></button>
+      <button value="3" class="thumb-label btn-no-border"><img src="./images/image-product-4-thumbnail.jpg" alt="" class="thumb-img-4"></button>
+    </div>
+
+  </div>
+
+
+    <div class="main-text">
+      <div class="main-description">
+        <p class="orange-p">Sneaker Company</p>
+        <h2>Fall Limited Edition Sneakers</h2>
+        <p class="font-14">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+      </div>
+      <div class="main-prices">
+        <div class="prices-1-part">
+          <p class="bold-price">$125.00</p>
+        <p class="percent-discount">50%</p>
+        </div>
+        <p class="previous-price">$250.00</p>
+      </div>
+      <div class="main-buttons">
+        <div class="quantity">
+          <button class="btn-quant" value="minus"><img src="./images/icon-minus.svg" alt=""></button>
+          <span class="quantity-value">0</span>
+          <button class="btn-quant" value="plus"><img src="./images/icon-plus.svg" alt=""></button>
+        </div>
+        <button class="add-to-cart orange-btn"> <img src="./images/icon-cart.svg"  alt="">&nbsp; Add to cart</button>
+      </div>
+    </div>
+
+    
+
+  </main>
+
+ 
+</div>
+
+
+
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+
+</body>
+</html>

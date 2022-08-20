@@ -1,0 +1,1 @@
+Basic e-commerce web-site with small but fair amount of interactivity. I was mostly sticking up to the design - the biggest difference is additional stage for tablet-like devices (the flow didn't look good in either mobile and desktop version).

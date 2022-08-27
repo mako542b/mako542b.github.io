@@ -77,8 +77,11 @@ body {
     gap:1rem;
     padding-top:6rem;
     font-weight:700;
-    transform:scale(0,1);
+    transform:scale(0.001,0.001);
+    /* display:none; */
     box-shadow: 40vw 0 rgb(0, 0, 0, 0.15);
+    transition: transform .5s ease-in-out;
+    transform-origin: 0 0;
 }
 
 .menu-btn[aria-expanded] ~ .nav {
@@ -102,6 +105,11 @@ body {
 
 .avatar {
     transform: scale(1.4);
+    border-radius: 50%;
+}
+
+.avatar:hover {
+    outline: 1px solid orange;
 }
 
 .small-images, .small-images-zoom {
@@ -125,7 +133,7 @@ body {
     display:flex;
     flex-shrink: 0;
     object-fit: cover;
-    height:250px;
+    /* height:250px; */
 
 }
 
@@ -317,8 +325,11 @@ button {
 
 .relative-pos {
     position:absolute;
-    inset-block:auto;
-    inset-inline:auto;
+    /* top:3rem; */
+    /* bottom:1rem; */
+    width:50vw;
+    margin-inline:auto;
+    padding-block:3rem;
 }
 
 .cart-div {
@@ -465,13 +476,14 @@ button {
 
     
     .header-icons {
-        /* margin:0; */
         gap: clamp(2rem, calc(2rem + ((1vw - 0.5rem) * 5)), 4rem);
     }
     
 
   
-
+    .image-wrapper {
+        position:relative;
+    }
     
 
     .header img{
@@ -543,9 +555,9 @@ button {
     }
 
     .thumbnails-zoom {
-        position:absolute;
-        max-width:90%;
+        max-width:70%;
         margin-top:1rem;
+        margin-inline:auto;
 
     }
 
@@ -557,7 +569,10 @@ button {
     } 
 
 
-    .thumb-label[chosen] > img , .thumb-label-zoom[chosen] > img {
+    .thumb-label[chosen] > img , 
+    .thumb-label-zoom[chosen] > img,
+    .thumb-label > img:hover,
+    .thumb-label-zoom > img:hover {
         opacity:0.3;
         outline: 2px solid orange;
         border-radius:1rem;
@@ -569,19 +584,21 @@ button {
 
     .zoom-images {
         position:relative;
+        margin-inline:auto;
         overflow-x:hidden;
-        max-width:50vw;
+        width:100%;
     }
 
     .master-zoom-container {
         position:fixed;
         overflow-y: scroll;
+        z-index:300;
         inset:0;
         flex-direction: column;
         place-items: center;
         gap: var(--space-s-m);
         z-index:200;
-        justify-content: center;
+        /* justify-content: center; */
         background-color: rgb(0,0,0,.7);
         display:none;
     }
@@ -599,7 +616,7 @@ button {
         width:100%;
         display:flex;
         flex-shrink: 0;
-        object-fit:none;
+        object-fit:cover;
         border-radius: .8rem;
     
     }
@@ -608,25 +625,18 @@ button {
         background:none;
         border:none;
         position: absolute;
-        right:8%;
-        top: 8%;
+        right:0;
+        top: -2rem;
         transform:scale(1.5);
-        display:none;
         z-index:100;
     }
 
-    .relative-pos:hover .close-zoom-btn {
-        display:block;
-    }
 
     .small-images {
         pointer-events: all;
         cursor: pointer;
     }
 
-    .small-images-zoom > img {
-        object-fit: contain;
-    }
 
     .close-zoom-btn:hover > img  {
         filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
@@ -661,6 +671,9 @@ button {
     .nav {
         transform: scale(1,1);
         box-shadow: none;
+        background: none;
+        font-weight:400;
+        z-index:0;
     }
 
     .main {
@@ -691,17 +704,6 @@ button {
 
     .header-icons {
         margin:0;
-    }
-
-    .zoom-images {
-        max-width:30vw;
-
-    }
-
-    .close-zoom-btn {
-        display:block;
-        right:0;
-        top:-8%;
     }
 
 }
